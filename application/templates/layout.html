@@ -1,12 +1,30 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My Django Project</title>
+    <link rel="stylesheet" href="{% static 'home.css' %}">
 </head>
 <body>
-    
+
+  <!-- NAVBAR -->
+  <nav>
+    <h2>MyBrand</h2>
+    <ul>
+     <li><a href="{% url 'home' %}">Home</a></li>
+    <li><a href="{% url 'about' %}">About</a></li>
+    <li><a href="{% url 'contact' %}">Contact</a></li>
+    </ul>
+  </nav>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+     <!-- FOOTER -->
+  <footer>
+    © 2026 MyBrand | All Rights Reserved
+  </footer>
 </body>
 </html>

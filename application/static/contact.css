@@ -6,22 +6,47 @@
 }
 
 body {
-    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    /* Stack Nav, Main, and Footer vertically */
+    flex-direction: column; 
+    /* This ensures the gradient covers the full background */
+    background: linear-gradient(135deg, #ff9966, #ff5e62);
+    background-attachment: fixed;
+}
+
+/* 1. Style the Navbar to span the full width */
+nav {
+    width: 100%;
+    background: white;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* 2. Create a wrapper for the content to center the form */
+main {
+    flex: 1; /* This pushes the footer to the bottom */
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #ff9966, #ff5e62);
+    width: 100%;
+    padding: 40px 20px;
 }
 
 .contact-container {
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px); /* Support for Safari */
     padding: 40px;
     border-radius: 20px;
     width: 100%;
     max-width: 450px;
     color: #fff;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .contact-container h2 {
@@ -48,6 +73,7 @@ body {
     border: none;
     outline: none;
     font-size: 14px;
+    color: #333; /* Ensure text is readable inside inputs */
 }
 
 .input-group textarea {
@@ -70,4 +96,14 @@ body {
 .btn:hover {
     background: #ffe6e6;
     transform: scale(1.05);
+}
+
+/* 3. Style the Footer to span the full width */
+footer {
+    width: 100%;
+    background: #222;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
 }

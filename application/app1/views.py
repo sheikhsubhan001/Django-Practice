@@ -1,12 +1,11 @@
+# app1/views.py
 from django.shortcuts import render
 
-# Create your views here.
-
 def Home(request):
-    return render(request, 'Frontend/index.html')
+    return render(request, 'index.html')
 
 def About(request):
-    return render(request, 'Frontend/about.html')
+    return render(request, 'About.html') # Or 'app1/About.html' if namespaced
 
 def Contact(request):
-    return render(request, 'Frontend/contact.html')
+    return render(request, 'Contact.html')

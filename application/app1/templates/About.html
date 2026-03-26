@@ -1,13 +1,12 @@
+{% extends "layout.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
+
+{% block title %}About - MyBrand{% endblock %}
+
+{% block content %}
   <link rel="stylesheet" href="{% static 'about.css' %}">
   <title>About Us</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
 
   <div class="container">
     <div class="about-section">
@@ -36,9 +35,4 @@
     </div>
   </div>
 
-  <footer>
-    © 2026 Your Company | All Rights Reserved
-  </footer>
-
-</body>
-</html>
+{% endblock %}

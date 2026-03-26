@@ -1,29 +1,13 @@
+{% extends "layout.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
+
+{% block title %}Home - MyBrand{% endblock %}
+
+{% block content %}
   <link rel="stylesheet" href="{% static 'home.css' %}">
   <title>Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <style>
-    
-  </style>
-</head>
-
-<body>
-
-  <!-- NAVBAR -->
-  <nav>
-    <h2>MyBrand</h2>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-
   <!-- HERO -->
   <section class="hero">
     <div class="hero-content">
@@ -65,10 +49,6 @@
     <button>Contact Us</button>
   </section>
 
-  <!-- FOOTER -->
-  <footer>
-    © 2026 MyBrand | All Rights Reserved
-  </footer>
 
-</body>
-</html>
+
+{% endblock %}
