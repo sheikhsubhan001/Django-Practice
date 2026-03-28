@@ -7,7 +7,8 @@
   <link rel="stylesheet" href="{% static 'home.css' %}">
   <title>Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+<main class="main-container">
+
   <!-- HERO -->
   <section class="hero">
     <div class="hero-content">
@@ -19,6 +20,21 @@
       <button class="btn">Get Started</button>
     </div>
   </section>
+
+  {% comment %} STUDENT LIST
+
+  <section class="students">
+    <h2>Our Students</h2>
+    <div class="student-cards">
+      {% for student in students %}
+      <div class="student-card">
+        <img src="{{ student.picture.url }}" alt="{{ student.name }}">
+        <h3>{{ student.name }}</h3>
+        <p>Age: {{ student.age }}</p>
+        <p>Email: {{ student.email }}</p>
+      </div>
+      {% endfor %}
+    </div> {% endcomment %}
 
   <!-- FEATURES -->
   <section class="features">
@@ -42,13 +58,30 @@
     </div>
   </section>
 
+
+   {% comment %} STUDENT LIST {% endcomment %}
+
+  <section class="students">
+    <h2>Our Students</h2>
+    <div class="student-cards">
+      {% for student in students %}
+      <div class="student-card">
+        <img src="{{ student.picture.url }}" alt="{{ student.name }}">
+        <h3>{{ student.name }}</h3>
+        <p>Age: {{ student.age }}</p>
+        <p>Email: {{ student.email }}</p>
+        <p>Scholarship: {{ student.scholorship }}%</p>
+      </div>
+      {% endfor %}
+    </div>
+
   <!-- CALL TO ACTION -->
   <section class="cta">
     <h2>Ready to Start Your Project?</h2>
     <p>Let's build something amazing together.</p>
     <button>Contact Us</button>
   </section>
-
+</main>
 
 
 {% endblock %}
